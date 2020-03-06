@@ -5,7 +5,7 @@ import {FontAwesome} from "@expo/vector-icons"
 
 function Button({iconName, onPress}){
     return (
-        <TouchableOpacity onPress={onPress}>
+        <TouchableOpacity onPressOut={onPress}>
             <FontAwesome name={iconName} size="80" color="white"/>
         </TouchableOpacity>
     )
@@ -14,6 +14,6 @@ function Button({iconName, onPress}){
 Button.propTypes = {
     iconName: propTypes.string.isRequired,
     onPress: propTypes.func.isRequired
-}
+};
 
 export default Button;
